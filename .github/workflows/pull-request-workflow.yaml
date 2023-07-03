@@ -1,0 +1,35 @@
+name: pull-request-workflow
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+  workflow_dispatch: null
+jobs:
+  package-testing:
+    name: Package testing
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: write
+    steps:
+    - uses: actions/checkout@v3
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        sudo apt update && sudo apt upgrade
+        sudo apt install ffmpeg
+        python3 -m pip install --upgrade pip
+        pip install pytest
+        pip install -e .
+    - name: Run unit tests
+      run: python3 -m pytest
+  ruff-code-linting:
+    name: Code linting with Ruff
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: chartboost/ruff-action@v1
+      with:
+        src: "."
