@@ -4,20 +4,16 @@ Python package to swap out the audio on a YouTube video with another song.
 ## Getting Started
 
 Cannot currently upload to PyPi as using GitHub projects as dependencies. In future, can revert to PyPi
-dependencies when issues have been fixed. For now can install by cloning repo and performing:
+dependencies when dependency package issues have been fixed. For now can install directly 
+from this repo as follows:
 
 ```
-pip install .
-```
-Future installation will be: 
-
-```
-pip install songswap
+pip install git+https://github.com/itsjondavies/songswap
 ```
 
 NOTE: You will also need to install ffmpeg for the package to work
 
-### How to run
+### Running a songswap process
 
 You can easily run a songswap process as follows:
 
