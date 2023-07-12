@@ -7,8 +7,14 @@ import librosa
 import moviepy.editor as mpe
 import pytube
 
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler.setLevel(logging.INFO)
+formatter = logging.Formatter("%(message)s")
+stdout_handler.setFormatter(formatter)
+logger.addHandler(stdout_handler)
 
 
 def download_video(
@@ -34,7 +40,7 @@ def download_video(
         output_path=path,
         filename=filename
     )
-    logging.info(f"Downloaded {video.title} to {output_path}/{filename}.")
+    logger.info(f"Downloaded {video.title} to {output_path}/{filename}.")
     return video
 
 def swap_songs(
@@ -77,11 +83,11 @@ def swap_songs(
     # verify changed tempos
     alt_old_audio = AudioClip(alt_base_video_path, base_yt.title)
     alt_new_audio = AudioClip(alt_new_audio_path, new_yt.title)
-    logging.info(
-        f"Altered '{alt_old_audio.name}' tempo: {alt_old_audio.tempo}"
+    logger.info(
+        f"Altered '{alt_old_audio.name}' tempo: {alt_old_audio.tempo:.2f}"
     )
-    logging.info(
-        f"Altered '{alt_new_audio.name}' tempo: {alt_new_audio.tempo}"
+    logger.info(
+        f"Altered '{alt_new_audio.name}' tempo: {alt_new_audio.tempo:.2f}"
     )
 
     # work out final audio/video clippings
@@ -136,17 +142,17 @@ def check_tempo_match(
         audio2: AudioClip,
         tempo_tol: float=0.15
 ) -> None:
-    logging.info(f"{audio1.name} tempo: {audio1.tempo}")
-    logging.info(f"{audio2.name} tempo: {audio2.tempo}")
+    logger.info(f"{audio1.name} tempo: {audio1.tempo:.2f}")
+    logger.info(f"{audio2.name} tempo: {audio2.tempo:.2f}")
     tempo_diff = abs(audio1.tempo - audio2.tempo) / audio1.tempo
     if tempo_diff > tempo_tol:
         raise ValueError(
-            f"Tempo difference of {tempo_diff:.3f} is greater than"
+            f"Tempo difference of {tempo_diff:.2f} is greater than"
             f"allowed value of {tempo_tol}. Try increasing tempo_tol "
             f"parameter."
         )
     else:
-        logging.info("Tempo's compatible.")
+        logger.info("Tempo's compatible.")
 
 
 def alter_media_speed(
