@@ -5,17 +5,16 @@ backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393
 backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1687772187254/work
 certifi==2023.5.7
 cffi==1.15.1
-charset-normalizer==3.1.0
+charset-normalizer==3.2.0
 colorama==0.4.6
 debugpy @ file:///C:/ci/debugpy_1637091961445/work
 decorator==5.1.1
 exceptiongroup==1.1.2
 executing @ file:///home/conda/feedstock_root/build_artifacts/executing_1667317341051/work
-ffmpy==0.3.0
 idna==3.4
 imageio==2.31.1
 imageio-ffmpeg==0.4.8
-importlib-metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1687138353019/work
+importlib-metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1688754491823/work
 iniconfig==2.0.0
 ipykernel @ file:///D:/bld/ipykernel_1655369313836/work
 ipython @ file:///D:/bld/ipython_1685727936079/work
@@ -27,7 +26,7 @@ lazy_loader==0.3
 librosa==0.10.0.post2
 llvmlite==0.40.1
 matplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1660814786464/work
-moviepy @ git+https://github.com/Zulko/moviepy@b5bb086439cfd0960011a065f229eb7a7b4ebad5
+moviepy @ git+https://github.com/Zulko/moviepy.git@b5bb086439cfd0960011a065f229eb7a7b4ebad5
 msgpack==1.0.5
 nest-asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1664684991461/work
 numba==0.57.1
@@ -36,14 +35,15 @@ packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_16813370
 parso @ file:///home/conda/feedstock_root/build_artifacts/parso_1638334955874/work
 pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1602536217715/work
 Pillow==10.0.0
-platformdirs @ file:///home/conda/feedstock_root/build_artifacts/platformdirs_1687705014305/work
+platformdirs @ file:///home/conda/feedstock_root/build_artifacts/platformdirs_1688739404342/work
 pluggy==1.2.0
 pooch==1.6.0
 proglog==0.1.10
-prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1677600924538/work
+prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1688565951714/work
 psutil @ file:///C:/Windows/Temp/abs_b2c2fd7f-9fd5-4756-95ea-8aed74d0039flsd9qufz/croots/recipe/psutil_1656431277748/work
 pure-eval @ file:///home/conda/feedstock_root/build_artifacts/pure_eval_1642875951954/work
 pycparser==2.21
+pydub==0.25.1
 Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1681904169130/work
 pytest==7.4.0
 python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1626286286081/work
@@ -51,15 +51,15 @@ pytube @ git+https://github.com/oncename/pytube@6c45936b9703ce986ccb8d0d3595c797
 pywin32==305.1
 pyzmq @ file:///C:/b/abs_655zk4a3s8/croot/pyzmq_1686601465034/work
 requests==2.31.0
-ruff==0.0.276
+ruff==0.0.278
 scikit-learn==1.3.0
 scipy==1.11.1
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
--e git+https://github.com/itsjondavies/songswap@aa875de7b9ab241986d2e4dbd076caad708db1b0#egg=songswap
+-e git+https://github.com/itsjondavies/songswap.git@04e2cfa5eccd282ed9ce16a6c040448b16cc448e#egg=songswap
 soundfile==0.12.1
 soxr==0.3.5
 stack-data @ file:///home/conda/feedstock_root/build_artifacts/stack_data_1669632077133/work
-threadpoolctl==3.1.0
+threadpoolctl==3.2.0
 tomli==2.0.1
 tornado @ file:///D:/bld/tornado_1656937934674/work
 tqdm==4.65.0
@@ -67,4 +67,4 @@ traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_16751105
 typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1688315532570/work
 urllib3==2.0.3
 wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1673864653149/work
-zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1677313463193/work
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1689027407711/work
