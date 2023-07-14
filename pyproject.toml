@@ -21,8 +21,8 @@ classifiers = [  # Optional
 dependencies = [ # Optional
   "pytube @ git+https://github.com/oncename/pytube",
   "librosa",
-  "ffmpy",
-  "moviepy @ git+https://github.com/Zulko/moviepy"
+  "moviepy @ git+https://github.com/Zulko/moviepy",
+  "pydub"
 ]
 
 [project.urls]  # Optional
