@@ -3,15 +3,16 @@ Python package to swap out the audio on a YouTube video with another song.
 
 ## Getting Started
 
-Cannot currently upload to PyPi as using GitHub projects as dependencies. In future, can revert to PyPi
-dependencies when dependency package issues have been fixed. For now can install directly 
-from this repo as follows:
+Install directly from this repo as follows:
 
 ```
 pip install git+https://github.com/itsjondavies/songswap
 ```
 
-NOTE: You will also need to install ffmpeg for the package to work
+NOTE: Cannot currently upload to PyPi as using GitHub projects as dependencies. In future, can revert to PyPi
+dependencies when dependency package issues have been fixed.
+
+NOTE: You will also need to [install ffmpeg](https://adamtheautomator.com/install-ffmpeg/) for the package to work.
 
 ### Running a songswap process
 
@@ -29,16 +30,10 @@ swap_songs(
 
 ## Required Improvements
 * Allow upload to PyPi
-* Needs to work for more file formats than .mp3 and .mp4
 * Allow a user to specify a subclip on the base video
 * Allow a user to specify a subclip on the new audio video
-* Test if works for Python 3.7 & 3.8
+* Test if works for Python 3.7 & 3.8 and other OS to Windows
 * Implement pychorus chorus detection so users can option to auto-detect the chorus
-* Edit the moviepy package so that it can load librosa beat detection automatically
-* Switch the speed alteration to moviepy instead of ffmpeg for speed gain
-* In general, make more user friendly
-* Suppress moviepy warning about using alternate soundfile
-* Improve logging in general - unify all package prints to stdout in more formalised manner
 * Implement FastAPI to serve function as API
 
 ## License
